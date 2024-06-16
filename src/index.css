@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html{
+    color: theme('colors.color.1')
+}
+h1{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 1.25rem 2.5rem;
+    font-weight: 500;
+}
+h2{
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}

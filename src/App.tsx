@@ -4,10 +4,14 @@ import Sidebar from "./components/Sidebar";
 function App() {
   return (
     <>
-      <Sidebar></Sidebar>
-      <Outlet></Outlet>
+      <div className="flex">
+        <Sidebar></Sidebar>
+        <div className="w-full">
+          <Outlet></Outlet>
+        </div>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

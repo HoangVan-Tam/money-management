@@ -1,6 +1,9 @@
 
 
-import { RiDashboardFill } from "react-icons/ri";
+import { LuLayoutDashboard } from "react-icons/lu";
+import { TbPigMoney } from "react-icons/tb";
+import { GiPayMoney } from "react-icons/gi";
+import { GiReceiveMoney } from "react-icons/gi";
 
 interface Navigation {
     title: string,
@@ -12,21 +15,22 @@ export const menu:Navigation[] = [
     {
         title: 'Dashboard',
         href: '/',
-        icon: <RiDashboardFill/>
+        icon: <LuLayoutDashboard />
     },
     {
         title: 'Income',
         href: '/income',
-        icon:<RiDashboardFill/>
+        icon: <GiReceiveMoney />
     },
     {
         title: 'Spending',
         href: '/spending',
-        icon:<RiDashboardFill/>
+        icon: <GiPayMoney />
     },
     {
         title: 'Savings',
         href: '/savings',
-        icon:<RiDashboardFill/>
+        icon: <TbPigMoney />
+
     }
 ];
