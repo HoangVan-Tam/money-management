@@ -1,4 +1,5 @@
-import tpbankLogo from "../assets/tpbank.png";
+import tpbankLogo from "../assets/tpbank.jpg";
+import veitcombankLogo from "../assets/vietcombank-logo.webp";
 
 interface DebitCard {
   Amount: number;
@@ -16,14 +17,14 @@ export const DebitCard: DebitCard[] = [
     BankName: "TP Bank",
     AccountOwner: "Hoang Van Tam",
     BankLogoUrl: tpbankLogo,
-    color: "#30164f",
+    color: "#512f7c",
   },
   {
     Amount: 12300,
     CardNumber: "**** **** **** 1233",
     BankName: "TP Bank",
     AccountOwner: "Hoang Van Tam",
-    BankLogoUrl: tpbankLogo,
-    color: "#30164f",
+    BankLogoUrl: veitcombankLogo,
+    color: "#0a4622",
   },
 ];

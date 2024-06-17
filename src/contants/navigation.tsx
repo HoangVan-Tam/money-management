@@ -2,13 +2,13 @@
 
 import { LuLayoutDashboard } from "react-icons/lu";
 import { TbPigMoney } from "react-icons/tb";
-import { GiPayMoney } from "react-icons/gi";
-import { GiReceiveMoney } from "react-icons/gi";
+import { ReactNode } from "react";
+import { GrTransaction } from "react-icons/gr";
 
 interface Navigation {
     title: string,
     href: string
-    icon: any
+    icon: ReactNode
 }
 
 export const menu:Navigation[] = [
@@ -18,14 +18,9 @@ export const menu:Navigation[] = [
         icon: <LuLayoutDashboard />
     },
     {
-        title: 'Income',
-        href: '/income',
-        icon: <GiReceiveMoney />
-    },
-    {
-        title: 'Spending',
-        href: '/spending',
-        icon: <GiPayMoney />
+        title: 'Transaction',
+        href: '/transaction',
+        icon: <GrTransaction />
     },
     {
         title: 'Savings',
