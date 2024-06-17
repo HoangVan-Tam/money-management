@@ -18,7 +18,7 @@ const Sidebar = () => {
         >
           <Button
             onClick={() => setOpen(!open)}
-            className={`rounded-full text-xl
+            className={`z-20 rounded-full text-xl
         absolute -right-3 top-[61px] opacity-70 hover:opacity-100 ${
           !open ? "rotate-180" : ""
         }`}

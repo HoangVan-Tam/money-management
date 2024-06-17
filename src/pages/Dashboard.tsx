@@ -1,9 +1,8 @@
 import React from "react";
-import Devider from "../components/Devider";
 import Container from "../components/Container";
 import { DebitCard } from "../contants/DebitCard";
 import { currencyFormat, getIconOfCategory } from "../common/Helper";
-import { Transactions } from "../contants/Transaction";
+import { Transactions } from "../contants/TransactionDetail";
 import Button from "../components/Button";
 
 const Dashboard = () => {
@@ -45,7 +44,10 @@ const Dashboard = () => {
             <div className="mt-5">
               {Transactions.map((item, index) => {
                 return (
-                  <div key={index} className="flex items-center justify-between bg-gray-400/30 px-3 py-2 rounded-xl text-color-1 mt-3 hover:bg-gray-500/50">
+                  <div
+                    key={index}
+                    className="flex items-center justify-between bg-gray-400/30 px-3 py-2 rounded-xl text-color-1 mt-3 hover:bg-gray-500/50"
+                  >
                     <div className="flex items-center">
                       <div className="text-xl p-3 bg-color-2 text-color-4 rounded-xl">
                         {getIconOfCategory(item.Categories)}
@@ -56,13 +58,19 @@ const Dashboard = () => {
                       </div>
                     </div>
                     <div>
-                      <p className={`text-right text-xl font-bold ${item.Income == 0 && 'text-red-600'} ${item.Spending == 0 && 'text-green-700'} `}>
-                        {item.Income != 0 || ('-' + currencyFormat(item.Spending))} {item.Income != 0 && ('+' + currencyFormat(item.Income))}
+                      <p
+                        className={`text-right text-xl font-bold ${
+                          item.Income == 0 && "text-red-600"
+                        } ${item.Spending == 0 && "text-green-700"} `}
+                      >
+                        {item.Income != 0 ||
+                          "-" + currencyFormat(item.Spending)}{" "}
+                        {item.Income != 0 && "+" + currencyFormat(item.Income)}
                       </p>
                       <p className="text-sm text-right">{item.Date}</p>
                     </div>
                   </div>
-                )
+                );
               })}
             </div>
           </div>

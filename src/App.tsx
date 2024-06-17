@@ -8,10 +8,19 @@ function App() {
     <>
       <div className="flex">
         <Sidebar></Sidebar>
-        <div className="w-full">
-          <h1>{location.pathname.substring(1) == '' ? 'Dashboard' : location.pathname.substring(1,2).toUpperCase() + location.pathname.substring(2)}</h1>
-          <Devider />
-          <Outlet></Outlet>
+        <div className="w-full h-screen relative overflow-scroll">
+          <div className="fixed z-10 bg-white w-full">
+            <h1>
+              {location.pathname.substring(1) == ""
+                ? "Dashboard"
+                : location.pathname.substring(1, 2).toUpperCase() +
+                  location.pathname.substring(2)}
+            </h1>
+            <Devider />
+          </div>
+          <div className="absolute top-16 w-full">
+            <Outlet></Outlet>
+          </div>
         </div>
       </div>
     </>
